@@ -52,7 +52,7 @@ jobs:
 
     - name: Log in to ACR
       run: |
-        echo ${{ secrets.AZUER_PASSWORD }} | docker login ${{ secrets.AZURE_URL }} -u ${{ secrets.AZUER_USER }} --password-stdin
+        echo ${{ secrets.AZURE_PASSWORD }} | docker login ${{ secrets.AZURE_URL }} -u ${{ secrets.AZURE_USER }} --password-stdin
 
     - name: Build and Push Docker image
       uses: docker/build-push-action@v3
